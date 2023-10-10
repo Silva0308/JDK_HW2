@@ -70,15 +70,10 @@ public class ClientGUI extends JFrame implements IClientView {
         headerPanel = new JPanel(new GridLayout(2, 3));
         tfIPAddress = new JTextField("127.0.0.1");
         tfPort = new JTextField("8189");
-        tfLogin = new JTextField("Вася");
+        tfLogin = new JTextField("Ваше имя");
         password = new JPasswordField("123456");
         btnLogin = new JButton("login");
-        btnLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                connectToServer();
-            }
-        });
+        btnLogin.addActionListener(e -> connectToServer());
 
         headerPanel.add(tfIPAddress);
         headerPanel.add(tfPort);
